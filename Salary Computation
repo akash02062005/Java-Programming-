@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+    int BasicSalary=sc.nextInt();
+    double HRA=0.0,DA=0.0;
+    if(BasicSalary<15000){
+         HRA+=(float)(15*BasicSalary)/100;
+         DA+=(float)(90*BasicSalary)/100;
+    }
+    else if(BasicSalary>=15000){
+         HRA+=5000;
+         DA+=(float)(98*BasicSalary)/100;
+    }
+    float GrossSalary=(float)(BasicSalary+HRA+DA);
+    System.out.printf("%.2f",GrossSalary);
+    }
+}
