@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+    char ch='F';
+    String name=sc.nextLine();
+    int m1=sc.nextInt();
+    int m2=sc.nextInt();
+    int m3=sc.nextInt();
+    int m4=sc.nextInt();
+    int m5=sc.nextInt();
+    
+    System.out.println("Name of the Student:"+name);
+    int total=m1+m2+m3+m4+m5;
+    double avg=(float)total/5;
+    System.out.println("Total Mark:"+total);
+    System.out.printf("Average Mark:%.1f\n",avg);
+    if(avg==100)
+        ch='S';
+    else if( avg>=90)
+        ch='A';
+    else if( avg>=80)
+        ch='B';
+    else if( avg>=70)
+        ch='C';
+    else if( avg>=60)
+        ch='D';
+    else if( avg>=50)
+        ch='E';
+    else {
+        System.out.println("Grade Mark:Fail");
+        return;
+    }
+    System.out.println("Grade Mark:"+ch);
+    }
+}
