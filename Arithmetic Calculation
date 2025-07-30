@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+     float a=sc.nextInt();
+     float b=sc.nextInt();
+    char op=sc.next().charAt(0);
+    switch(op){
+        case '+':
+            System.out.printf("Addition of two number is %.1f\n",a+b);
+            break;
+        case '-':
+            System.out.printf("Subtraction of two number is %.1f\n",a-b);
+            break;
+        case'*':
+            System.out.printf("Multiplication of two number is %.1f\n",a*b);
+            break;
+        case '/':
+            if(b==0){
+                System.out.printf("Division by zero Exception\n");
+            }
+            else{
+                System.out.printf("Division of two number is %.1f\n",a/b);
+            }
+            break;
+        case '%':
+             if(b==0){
+                System.out.printf("Division by zero Exception\n");
+            }
+            else{
+                System.out.printf("Modulo of two number is %.1f\n",a%b);
+            }
+            break;
+        default:
+            System.out.println("Invalid Input");
+    }
+    }
+}
